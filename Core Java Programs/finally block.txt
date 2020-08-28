@@ -1,0 +1,51 @@
+Program(i):
+class finallydemo
+{
+public static void main(String args[])
+{
+try
+{
+int a=10,b=0;
+int c=a/b;
+System.out.println(c);
+}
+catch(ArithmeticException e)
+{
+System.out.println(e);
+}
+finally
+{
+System.out.println("This is inside finally block");
+}
+}
+}
+Output:
+java.lang.ArithmeticException: / by zero
+This is inside finally block
+
+
+
+Program(ii):
+class finallydemo
+{
+public static void main(String args[])
+{
+try
+{
+int a=10,b=5;
+int c=a/b;
+System.out.println(c);
+}
+catch(ArithmeticException e)
+{
+System.out.println(e);
+}
+finally
+{
+System.out.println("This is inside finally block");
+}
+}
+}
+Output:
+2
+This is inside finally block

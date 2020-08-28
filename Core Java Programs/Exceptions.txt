@@ -1,0 +1,123 @@
+(i) Arithmetic exception
+class arithmeticdemo
+{
+public static void main(String args[])
+{
+try
+{
+int a = 10, b = 0;
+int c = a/b;
+System.out.println (c);
+}
+catch(ArithmeticException e)
+{
+System.out.println (e);
+}
+}
+}
+Output:
+java.lang.ArithmeticException: / by zero
+
+
+(ii)NullPointer Exception
+class nullpointerdemo
+{
+public static void main(String args[])
+{
+try
+{
+String a = null;
+System.out.println(a.charAt(0));
+}
+catch(NullPointerException e)
+{
+System.out.println(e);
+}
+}
+}
+Output:
+java.lang.NullPointerException
+
+
+(iii)StringIndexOutOfBound Exception
+class stringbounddemo
+{
+public static void main(String args[])
+{
+try
+{
+II B.Tech II Sem CSE Java Lab Manual (R16) Prepared by: Dr. Md. Umar khan, KHIT, Guntur
+Page 29
+String a = "This is like chipping ";
+char c = a.charAt(24);
+System.out.println(c);
+}
+catch(StringIndexOutOfBoundsException e)
+{
+System.out.println(e);
+}
+}
+}
+Output:
+java.lang.StringIndexOutOfBoundsException: String index out of range: 24
+
+
+(iv)FileNotFound Exception
+import java.io.*;
+class filenotfounddemo
+{
+public static void main(String args[])
+{
+try
+{
+File file = new File("E://file.txt");
+FileReader fr = new FileReader(file);
+}
+catch (FileNotFoundException e)
+{
+System.out.println(e);
+}
+}
+}
+Output:
+java.io.FileNotFoundException: E:\file.txt (The system cannot find the file specified)
+
+
+(v)NumberFormat Exception
+class numberformatdemo
+{
+public static void main(String args[])
+{
+try
+{
+int num = Integer.parseInt ("akki") ;
+System.out.println(num);
+}
+catch(NumberFormatException e)
+{
+System.out.println(e);
+}
+}
+}
+Output:
+java.lang.NumberFormatException: For input string: "akki"
+
+
+(vi)ArrayIndexOutOfBounds Exception
+class arraybounddemo
+{
+public static void main(String args[])
+{
+try
+{
+int a[] = new int[5];
+a[6] = 9;
+}
+catch(ArrayIndexOutOfBoundsException e)
+{
+System.out.println (e);
+}
+}
+}
+Output:
+java.lang.ArrayIndexOutOfBoundsException: 6

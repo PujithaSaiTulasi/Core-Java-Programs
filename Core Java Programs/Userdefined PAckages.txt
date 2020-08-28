@@ -1,0 +1,45 @@
+(i) Creating a package:
+1. First declare the name of the package using package keyword
+Example: package mypack;
+2. Type the following program under this package statement. In package : class ,data, methods
+all are public
+
+package mypack;
+public class box
+{
+public int l=10,b=20;
+public void display()
+{
+System.out.println(l);
+System.out.println(b);
+}
+}
+3. Create sub directory with a name same that of package name under the current working
+directory by as follows. d:\>md mypack
+4. Under this subdirectory store the above program with a file name “box.java”.
+
+
+(ii) importing a package:
+Steps:
+1. packages can be accessed by using the import statement
+General form: import pack1[.pack2].(classname/*);
+Example: import java.io.*;
+Here pack1 is name of top level package and pack2 is name of sub package
+2. Type the following program under the current working directory and save the program with a
+file name “example.java”.
+import mypack.box;
+class packagedemo
+{
+public static void main(String args[])
+{
+box b1=new box();
+b1.display();
+}
+}
+3. Now compile the above program in the current working directory d:\
+javac packagedemo.java
+4. Execute the above program in current working directory
+java packagedemo
+Output:
+10
+20
