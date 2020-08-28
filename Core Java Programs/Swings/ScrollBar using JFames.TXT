@@ -1,0 +1,33 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class sample extends JFrame implements AdjustmentListener
+{
+ String msg;
+ JScrollBar jsb;
+ JLabel jl;
+ Container c;
+ sample()
+ {
+ 	c = getContentPane();
+    FlowLayout f = new FlowLayout();
+	c.setLayout(f);
+	jsb = new JScrollBar(JScrollBar.VERTICAL);
+	jl = new JLabel();
+	c.add(jl);
+	c.add(jsb);
+	jsb.addAdjustmentListener(this);
+ }
+ public void adjustmentValueChanged(AdjustmentEvent e)
+ {
+ 	msg = "ScrollBar value is: "+jsb.getValue();
+	jl.setText(msg);
+ }
+ public static void main(String a[])
+ {
+ 	sample s = new sample();
+	s.setVisible(true);
+	s.setSize(500,600);
+ }
+}
+ 

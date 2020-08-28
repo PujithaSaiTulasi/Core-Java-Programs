@@ -1,0 +1,41 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class sample extends JFrame implements ItemListener
+{
+ String msg;
+ Container c;
+ JRadioButton b1,b2;
+ sample()
+ {
+ 	c = getContentPane();
+	FlowLayout f = new FlowLayout();
+	c.setLayout(f);
+	b1 = new JRadioButton("ONE");
+	b2 = new JRadioButton("TWO");
+	c.add(b1);
+	c.add(b2);
+	b1.addItemListener(this);
+	b2.addItemListener(this);
+ }
+ public void itemStateChanged(ItemEvent e)
+ {
+	if(b1.isSelected())
+	{
+		c.setBackground(Color.red);
+		System.out.println("1 is pressed");
+	}
+	else if(b2.isSelected())
+	{
+		c.setBackground(Color.blue);
+		System.out.println("2 is pressed");
+	}
+ }
+ public static void main(String a[])
+ {
+ 	sample s = new sample();
+	s.setVisible(true);
+	s.setSize(500,600);
+ }
+}
+ 
